@@ -1,0 +1,65 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/Projects/website/dist
+/tmp
+/out-tsc
+/LAN/app/build-output/main
+/LAN/app/build-output/sub
+
+# dependencies
+Projects/main/node_modules
+Projects/sub/node_modules
+Projects/website/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+/.history
+
+# misc
+//Projects/main/.sass-cache
+/Projects/main/connect.lock
+/Projects/main/coverage
+/Projects/main/libpeerconnection.log
+/Projects/main/npm-debug.log
+/Projects/main/testem.log
+/Projects/main/typings
+/Projects/sub/.sass-cache
+/Projects/sub/connect.lock
+/Projects/sub/coverage
+/Projects/sub/libpeerconnection.log
+/Projects/sub/npm-debug.log
+/Projects/sub/testem.log
+/Projects/sub/typings
+/Projects/website/.sass-cache
+/Projects/website/connect.lock
+/Projects/website/coverage
+/Projects/website/libpeerconnection.log
+/Projects/website/npm-debug.log
+/Projects/website/testem.log
+/Projects/website/typings
+
+# e2e
+Projects/main/e2e/*.js
+Projects/main/e2e/*.map
+Projects/sub/e2e/*.js
+Projects/sub/e2e/*.map
+Projects/website/e2e/*.js
+Projects/website/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db

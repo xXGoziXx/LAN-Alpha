@@ -1,0 +1,112 @@
+{
+    "manifest_version": 1,
+    "type": "WebApp",
+    "meta": {
+        "name": "League Active Notes",
+        "author": "Phoenix Ultimate",
+        "version": "3.0.0",
+        "minimum-overwolf-version": "0.115.2",
+        "access-name": "",
+        "description": "The League of Legends Overwolf App that actively helps players take notes, while playing the game.",
+        "dock_button_title": "League Active Note",
+        "icon": "IconMouseOver.png",
+        "icon_gray": "IconMouseNormal.png",
+        "launcher_icon": "LauncherIcon.ico"
+
+    },
+    "permissions": [
+        "Extensions",
+        "Profile",
+        "Clipboard",
+        "Hotkeys",
+        "GameInfo",
+        "GameControl",
+        "FileSystem",
+        "DesktopStreaming"
+    ],
+    "dependencies": [],
+    "data": {
+        "start_window": "MainWindow",
+        "windows": {
+            "MainWindow": {
+                "file": "main/index.html",
+                "show_in_taskbar": true,
+                "transparent": true,
+                "resizable": true,
+                "show_minimize": true,
+                "clickthrough": false,
+                "show_only_on_stream": false,
+                "ignore_keyboard_events": false,
+                "desktop_only": true,
+                "disable_restore_animation": false,
+                "grab_keyboard_focus": true,
+                "background_optimization": true,
+                "size": {
+                    "width": 560,
+                    "height": 750
+                },
+                "min_size": {
+                    "width": 560,
+                    "height": 750
+                },
+                "max_size": {
+                    "width": 767,
+                    "height": 750
+                },
+                "start_position": {},
+                "topmost": false
+            },
+            "SubWindow": {
+                "file": "sub/index.html",
+                "show_in_taskbar": false,
+                "transparent": true,
+                "resizable": true,
+                "show_minimize": true,
+                "clickthrough": false,
+                "background_optimization": true,
+                "show_only_on_stream": false,
+                "ignore_keyboard_events": false,
+                "in_game_only": true,
+                "disable_restore_animation": false,
+                "grab_keyboard_focus": true,
+                "size": {
+                    "width": 560,
+                    "height": 450
+                },
+                "min_size": {
+                    "width": 560,
+                    "height": 450
+                },
+                "max_size": {
+                    "width": 560,
+                    "height": 450
+                },
+                "start_position": {},
+                "topmost": true
+            }
+        },
+        "externally_connectable": {
+            "matches": []
+        },
+        "hotkeys": {
+            "disable_marquee": {
+                "title": "Toggle Tips and Motivation",
+                "action-type": "custom",
+                "default": "Alt+L"
+            }
+        },
+        "content_scripts": [],
+        "game_events": [
+            5426
+        ],
+        "launch_events": [{
+            "event": "GameLaunch",
+            "event_data": {
+                "game_ids": [
+                    5426
+                ]
+            },
+            "start_minimized": true
+        }]
+    }
+}
