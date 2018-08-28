@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "LAN",
+            "lan",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "LAN",
+            "lan",
             "kebab-case"
         ]
     }

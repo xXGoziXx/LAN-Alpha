@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'LAN-root',
+  selector: 'lan-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
