@@ -13,21 +13,22 @@ import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: '!#home',
     component: HomeComponent,
-    data: { title: 'Home' }
   },
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
+    redirectTo: '!#home',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: '!#home',
+    pathMatch: 'full',
+  },
 ];
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,10 +36,13 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    AngularFireModule.initializeApp(environment.firebase, 'league-active-notes'),
-    AngularFirestoreModule
+    AngularFireModule.initializeApp(
+      environment.firebase,
+      'league-active-notes'
+    ),
+    AngularFirestoreModule,
   ],
   providers: [Title],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
