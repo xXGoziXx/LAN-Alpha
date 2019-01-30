@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { AddTipsComponent } from './add-tips/add-tips.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -13,22 +14,35 @@ import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   {
-    path: '!#home',
+    path: 'Home',
     component: HomeComponent,
+    data: { page: 'index' },
   },
   {
-    path: '',
-    redirectTo: '!#home',
-    pathMatch: 'full',
+    path: 'AddTips',
+    component: AddTipsComponent,
+    data: { page: 'addTips' },
   },
   {
-    path: '**',
-    redirectTo: '!#home',
-    pathMatch: 'full',
+    path: 'DeathTips',
+    component: DeathTipsComponent,
+    data: { page: 'death' },
   },
+  {
+    path: 'Overview',
+    component: OverviewComponent,
+    data: { page: 'match' },
+  },
+  {
+    path: 'About',
+    component: AboutComponent,
+    data: { page: 'about' },
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent },
 ];
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, AddTipsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
